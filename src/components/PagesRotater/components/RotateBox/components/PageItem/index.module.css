@@ -1,0 +1,51 @@
+.pageWrap {
+    position: relative;
+    padding: 12px;
+    margin: 12px;
+    background-color: #fff;
+    overflow: hidden;
+    user-select: none;
+}
+
+.pageWrap:hover {
+    background-color: #f9fafb;
+}
+
+.rotateButton {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: #f75f36;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    z-index: 999;
+}
+
+.rotateButton:hover {
+    scale: 1.05;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    transition: rotate 0.4s;
+    width: 250px;
+    height: 360px;
+}
+
+.page canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.pageFooter {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    translate: -50% 0;
+    font-style: oblique;
+    font-size: 12px;
+}

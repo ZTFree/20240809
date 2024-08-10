@@ -1,0 +1,20 @@
+.titleBox {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.titleMain {
+    font-size: 48px;
+    font-family: Tiempos, serif;
+    text-align: center;
+}
+
+.titleDesc {
+    margin-top: 20px;
+    max-width: 30em;
+    text-align: center;
+    color: #4b5563;
+}

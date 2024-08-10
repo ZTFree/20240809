@@ -1,0 +1,75 @@
+.rotateBox {
+    display: flex;
+    width: 80%;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.pagesBox {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+.buttonGroup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonGroup > * {
+    margin-left: 12px;
+}
+
+
+.orangeButton {
+    color: #fff;
+    background-color: #fb6033;
+    padding: 12px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.blackButton {
+    color: #fff;
+    background-color: #202937;
+    padding: 12px 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.circleButton {
+    background-color: #fff;
+    padding: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px gray;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    cursor: pointer;
+    transition: scale linear;
+}
+
+.circleButton:hover {
+    scale: 1.05;
+}
+
+.pagesDoc {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.docLoading{
+    visibility: hidden;
+}
