@@ -15,8 +15,8 @@ import {
   useState,
 } from "react";
 import { useAppSelector } from "@/redux/store";
-import { Space, Spin } from "antd";
-import styles from "@/components/PagesRotater/components/RotateBox/index.module.css";
+import { Popover, Space, Spin } from "antd";
+import styles from "../ButtonGroup/index.module.css";
 
 //通过下面的函数将dataURL转为Blob文件
 function dataURLtoBlob(dataurl: string) {
@@ -90,11 +90,13 @@ function DownLoadButton() {
 
   return (
     <>
-      <button className={styles.orangeButton} onClick={handleDownLoad}>
-        <Space align={"center"}>
-          download {isBuilding && <Spin size={"small"} />}
-        </Space>
-      </button>
+      <Popover content="Split and download PDF">
+        <button className={styles.orangeButton} onClick={handleDownLoad}>
+          <Space align={"center"}>
+            download {isBuilding && <Spin size={"small"} />}
+          </Space>
+        </button>
+      </Popover>
       <button style={{ display: "none" }} ref={dowloadBtnRef}>
         <PDFDownloadLink document={pdfDoc as ReactElement} />
       </button>

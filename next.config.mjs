@@ -2,9 +2,7 @@
 
 const nextConfig = {
     reactStrictMode: true,
-
     transpilePackages: ['antd'],
-    
 };
 
 export default nextConfig;

@@ -1,3 +1,4 @@
+"use client";
 import styles from "./index.module.css";
 import UploadBox from "@/components/PagesRotater/components/UploadBox";
 import TitleBox from "@/components/PagesRotater/components/TitleBox";
