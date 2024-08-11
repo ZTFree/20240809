@@ -1,6 +1,7 @@
 import { ReduxProvider } from "@/redux/provider";
 import { ConfigProvider } from "antd";
 import PagesRotater from "@/components/PagesRotater";
+import styles from "./index.module.css";
 
 function RootPage() {
   const themeToken = {
@@ -11,15 +12,17 @@ function RootPage() {
   };
 
   return (
-    <ReduxProvider>
-      <ConfigProvider
-        theme={{
-          token: themeToken,
-        }}
-      >
-        <PagesRotater />
-      </ConfigProvider>
-    </ReduxProvider>
+    <div className={styles.main}>
+      <ReduxProvider>
+        <ConfigProvider
+          theme={{
+            token: themeToken,
+          }}
+        >
+          <PagesRotater />
+        </ConfigProvider>
+      </ReduxProvider>
+    </div>
   );
 }
 

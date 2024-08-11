@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Head from "next/head";
-
+import "@/styles/globals.css";
 export const metadata: Metadata = {
   title: "Free PDF Page Rotator - Rotate Individual or All Pages",
   description:
