@@ -17,6 +17,7 @@ import {
 import { useAppSelector } from "@/redux/store";
 import { Popover, Space, Spin } from "antd";
 import styles from "../ButtonGroup/index.module.css";
+import { LoadingOutlined } from "@ant-design/icons";
 
 //通过下面的函数将dataURL转为Blob文件
 function dataURLtoBlob(dataurl: string) {
@@ -79,12 +80,10 @@ function DownLoadButton() {
 
       const preHref = link?.href;
       const timer = setInterval(() => {
-        if (link?.href !== preHref) {
-          clearInterval(timer);
-          setIsBuilding(false);
-          link?.click();
-        }
-      }, 0);
+        clearInterval(timer);
+        setIsBuilding(false);
+        link?.click();
+      }, 100);
     }
   }, [pdfDoc]);
 
@@ -93,7 +92,18 @@ function DownLoadButton() {
       <Popover content="Split and download PDF">
         <button className={styles.orangeButton} onClick={handleDownLoad}>
           <Space align={"center"}>
-            download {isBuilding && <Spin size={"small"} />}
+            download
+            {isBuilding && (
+              <Spin
+                indicator={
+                  <LoadingOutlined
+                    spin
+                    style={{ color: "#fff", fontSize: "20px" }}
+                  />
+                }
+                size={"small"}
+              />
+            )}
           </Space>
         </button>
       </Popover>

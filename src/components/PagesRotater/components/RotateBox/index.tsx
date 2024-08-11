@@ -17,6 +17,7 @@ import {
 } from "@/redux/features/rotater-slice";
 
 import { Spin } from "antd";
+import { LoadingOutlined } from "@ant-design/icons";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
 
@@ -88,7 +89,12 @@ function RotateBox(props: any) {
 
   return (
     <>
-      <Spin style={{ display: isRederOver ? "none" : "block" }} />
+      <Spin
+        indicator={
+          <LoadingOutlined spin style={{ color: "#000", fontSize: "32px" }} />
+        }
+        style={{ display: isRederOver ? "none" : "block" }}
+      />
       <div
         className={`${styles.rotateBox} ${!isRederOver && styles.docLoading}`}
       >
